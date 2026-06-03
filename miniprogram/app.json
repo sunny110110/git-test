@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result"
+  ],
+  "entryPagePath": "pages/index/index",
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#1B1712",
+    "backgroundTextStyle": "light"
+  },
+  "cloud": true
+}

@@ -1,0 +1,234 @@
+/* pages/index/index.wxss - 宋代美学风格 */
+page {
+  background: #e8e0d5;
+}
+
+.page {
+  padding: 30rpx;
+}
+
+/* 顶部背景区域 */
+.hero {
+  position: relative;
+  height: 360rpx;
+  overflow: hidden;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.1);
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+}
+
+.seal {
+  position: absolute;
+  top: 50rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100rpx;
+  height: 100rpx;
+  border: 2rpx solid #6B4E3D;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  color: #6B4E3D;
+  font-size: 52rpx;
+  font-family: "KaiTi", "楷体", serif;
+  background: rgba(255,255,255,0.15);
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  top: 180rpx;
+  text-align: center;
+  color: #C23B22;
+  font-size: 64rpx;
+  letter-spacing: 8rpx;
+  font-weight: 500;
+  text-shadow: 2rpx 2rpx 4rpx rgba(0,0,0,0.2);
+}
+
+.subtitle {
+  position: absolute;
+  width: 100%;
+  top: 260rpx;
+  text-align: center;
+  color: rgba(255,255,255,0.85);
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+}
+
+.card {
+  background: #fdf9f2;
+  border-radius: 24rpx;
+  margin-top: 28rpx;
+  padding: 30rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.06);
+  border: 1rpx solid #e2d9cf;
+}
+
+.season-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #e8dfd3;
+}
+
+.season-name {
+  color: #5a4a3a;
+  font-size: 36rpx;
+  font-weight: 500;
+  letter-spacing: 2rpx;
+}
+
+.season-time {
+  color: #9b8b7a;
+  font-size: 22rpx;
+}
+
+.season-text {
+  color: #6b5b4b;
+  line-height: 1.8;
+  font-size: 28rpx;
+  margin-top: 25rpx;
+}
+
+.line {
+  height: 1rpx;
+  background: #e8dfd3;
+  margin: 25rpx 0;
+}
+
+.food-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-left, .food-right {
+  flex: 1;
+}
+
+.food-title {
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.green {
+  color: #6b7b5a;
+}
+
+.red {
+  color: #b56a5c;
+}
+
+.food-item {
+  color: #7a6b5b;
+  line-height: 2;
+  font-size: 26rpx;
+}
+
+.module-title {
+  color: #5a4a3a;
+  font-size: 32rpx;
+  font-weight: 500;
+  letter-spacing: 4rpx;
+  border-left: 4rpx solid #b8a48c;
+  padding-left: 20rpx;
+  margin-bottom: 25rpx;
+}
+
+.quote {
+  color: #7a6b5b;
+  line-height: 1.9;
+  font-size: 28rpx;
+  font-style: italic;
+}
+
+.bookmark {
+  background: #f0ebe2;
+  border-radius: 16rpx;
+  padding: 50rpx 30rpx;
+  text-align: center;
+  border: 1rpx solid #e0d5c8;
+}
+
+.bookmark-text {
+  color: #5a4a3a;
+  font-size: 32rpx;
+  line-height: 2.2;
+  font-family: "KaiTi", "楷体", serif;
+  letter-spacing: 4rpx;
+}
+
+.bookmark-author {
+  margin-top: 20rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #9b8b7a;
+  font-style: italic;
+}
+
+.food-image {
+  width: 100%;
+  height: 380rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.1);
+}
+
+.img-desc {
+  text-align: center;
+  color: #9b8b7a;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  font-style: italic;
+  letter-spacing: 2rpx;
+}
+
+.btn {
+  margin-top: 40rpx;
+  background: #b8a48c;
+  color: #fff;
+  border-radius: 60rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  padding: 28rpx;
+  border: none;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+  letter-spacing: 4rpx;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  background: #a8937a;
+}
+
+.footer {
+  margin: 60rpx 0;
+  text-align: center;
+  color: #9b8b7a;
+  line-height: 2;
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+}
+
+/* 隐私政策链接 */
+.privacy-link {
+  text-align: center;
+  padding: 40rpx 0 30rpx;
+  font-size: 24rpx;
+  color: #9b8b7a;
+  text-decoration: underline;
+}

@@ -1,0 +1,74 @@
+<view class="page">
+
+<view class="hero">
+  <image class="hero-bg" src="/images/background/0043.jpg" mode="aspectFill" />
+  <view class="mask"></view>
+  <view class="seal">膳</view>
+  <view class="title">日日有膳</view>
+  <view class="subtitle">顺应四时 · 好好吃饭</view>
+</view>
+
+<view class="card">
+  <view class="season-header">
+    <text class="season-name">今日 · 芒种</text>
+    <text class="season-time">6月5日-6月21日</text>
+  </view>
+  <view class="season-text">
+    仲夏将至，宜养脾胃，
+    慎食生冷。
+    湿热渐盛，
+    宜清淡饮食。
+  </view>
+  <view class="line"></view>
+  <view class="food-box">
+    <view class="food-left">
+      <view class="food-title green">今日宜食</view>
+      <view class="food-item">● 山药</view>
+      <view class="food-item">● 莲子</view>
+      <view class="food-item">● 小米粥</view>
+      <view class="food-item">● 冬瓜</view>
+    </view>
+    <view class="food-right">
+      <view class="food-title red">今日少食</view>
+      <view class="food-item">● 辛辣</view>
+      <view class="food-item">● 油炸</view>
+      <view class="food-item">● 冷饮</view>
+      <view class="food-item">● 过饱</view>
+    </view>
+  </view>
+</view>
+
+<view class="card">
+  <view class="module-title">四时养生小笺</view>
+  <view class="quote">
+    芒种时节，仲夏将至。
+    养生之道，
+    贵在顺时而行，
+    食疗为先。
+  </view>
+</view>
+
+<view class="card">
+  <view class="module-title">每日签语</view>
+  <view class="bookmark">
+    <view class="bookmark-text">{{dailyQuote}}</view>
+    <view class="bookmark-author" wx:if="{{quoteAuthor}}">—— {{quoteAuthor}}</view>
+  </view>
+</view>
+
+<view class="card">
+  <image class="food-image" src="/images/background/01051.jpg" mode="aspectFill" />
+  <view class="img-desc">山药莲子小米粥 · 宋代工笔意境</view>
+</view>
+
+<button class="btn" bindtap="goToResult">生成今日膳食</button>
+
+<view class="footer">
+  日日有膳
+  <view>顺应四时 · 好好吃饭</view>
+</view>
+
+<!-- 隐私政策链接 -->
+<view class="privacy-link" bindtap="goToPrivacy">隐私政策</view>
+
+</view>

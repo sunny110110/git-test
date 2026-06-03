@@ -1,0 +1,8 @@
+node_modules/
+dist/
+miniprogram_npm/
+
+.project
+.idea
+
+.DS_Store

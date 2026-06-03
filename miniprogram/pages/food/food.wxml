@@ -1,0 +1,37 @@
+<view class="page-container">
+  <block wx:if="{{!started}}">
+    <view class="start-box">
+      <view class="logo">🍜</view>
+      <view class="brand">日日有膳</view>
+      <view class="slogan">每日·美食·运势</view>
+      <button class="btn-open" bindtap="startRecommend">开启今日膳缘</button>
+    </view>
+  </block>
+
+  <block wx:elif="{{loading}}">
+    <view class="loading-box">
+      <view class="loading-text">✨ 为您择膳中... ✨</view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="result-box">
+      <view class="result-date">{{foodData.date}}</view>
+      <view class="result-type {{foodData.type}}">{{foodData.type}}</view>
+      <view class="food-card">
+        <view class="food-quote">{{foodData.quote}}</view>
+        <view class="section-title">✅ 推荐食物</view>
+        <view class="tags">
+          <view class="tag" wx:for="{{foodData.foods_good}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="section-title">❌ 避免食物</view>
+        <view class="tags">
+          <view class="tag tag-bad" wx:for="{{foodData.foods_bad}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="emotion">{{foodData.emotion}}</view>
+        <view class="suggestion">{{foodData.suggestion}}</view>
+      </view>
+      <button class="refresh-btn" bindtap="refresh">刷新推荐</button>
+    </view>
+  </block>
+</view>

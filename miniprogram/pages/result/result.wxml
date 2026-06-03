@@ -1,0 +1,48 @@
+<!-- pages/result/result.wxml -->
+<view style="min-height: 100vh; background: #e8e0d5; padding: 40rpx;">
+  
+  <!-- 加载中 -->
+  <view wx:if="{{loading}}" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+    <text style="font-size: 36rpx; color: #5a4a3a;">✨ 为您择膳中... ✨</text>
+  </view>
+
+  <!-- 结果内容 -->
+  <view wx:else style="background: #fdf9f2; border-radius: 32rpx; padding: 40rpx;">
+    
+    <view style="text-align: center; font-size: 28rpx; color: #9b8b7a; margin-bottom: 20rpx;">{{foodData.date}}</view>
+    
+    <view style="text-align: center; font-size: 48rpx; font-weight: bold; padding: 20rpx; border-radius: 60rpx; margin-bottom: 25rpx; color: #fff; background: {{foodData.type === '火旺' ? '#f5576c' : (foodData.type === '湿重' ? '#4facfe' : '#43e97b')}};">
+      {{foodData.type}}
+    </view>
+    
+    <view style="text-align: center; font-size: 32rpx; color: #6b5b4b; margin-bottom: 30rpx; padding-bottom: 20rpx; border-bottom: 1rpx solid #e8dfd3;">{{foodData.quote}}</view>
+    
+    <!-- 推荐食物 -->
+    <view style="margin-bottom: 30rpx;">
+      <view style="font-size: 32rpx; font-weight: bold; margin-bottom: 15rpx; color: #6b7b5a;">✅ 今日宜食</view>
+      <view style="display: flex; flex-wrap: wrap; gap: 15rpx;">
+        <view wx:for="{{foodData.foods_good}}" wx:key="index" style="padding: 12rpx 28rpx; border-radius: 50rpx; background: #f0ebe2; color: #6b5b4b;">{{item}}</view>
+      </view>
+    </view>
+    
+    <!-- 避免食物 -->
+    <view style="margin-bottom: 30rpx;">
+      <view style="font-size: 32rpx; font-weight: bold; margin-bottom: 15rpx; color: #b56a5c;">❌ 今日少食</view>
+      <view style="display: flex; flex-wrap: wrap; gap: 15rpx;">
+        <view wx:for="{{foodData.foods_bad}}" wx:key="index" style="padding: 12rpx 28rpx; border-radius: 50rpx; background: #f5e8e5; color: #b56a5c;">{{item}}</view>
+      </view>
+    </view>
+    
+    <view style="background: #f0ebe2; padding: 25rpx; border-radius: 20rpx; margin-top: 20rpx; color: #6b5b4b;">{{foodData.emotion}}</view>
+    <view style="background: #f0ebe2; padding: 25rpx; border-radius: 20rpx; margin-top: 20rpx; color: #6b5b4b;">{{foodData.suggestion}}</view>
+    
+    <!-- 按钮 -->
+    <button style="border-radius: 60rpx; padding: 25rpx; margin-bottom: 20rpx; background: #c23b22; color: #fff;" bindtap="generatePoster">分享海报</button>
+    <button style="border-radius: 60rpx; padding: 25rpx; margin-bottom: 20rpx; background: #b8a48c; color: #fff;" bindtap="refresh">重新生成</button>
+    <button style="border-radius: 60rpx; padding: 25rpx; background: #e0d5c8; color: #8b7a6b;" bindtap="goBack">返回首页</button>
+    
+  </view>
+</view>
+
+<!-- Canvas 2D 模式，用于生成海报 -->
+<canvas type="2d" id="posterCanvas" style="position: fixed; top: 0; left: 0; width: 750rpx; height: 1500rpx; z-index: -1;"></canvas>
