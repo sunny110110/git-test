@@ -1,0 +1,33 @@
+[33mcommit 5568ccace091c6b06f170d643c7d4b74c752f9b8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Zhang San <zhangsan@example.com>
+Date:   Wed Jun 3 14:38:33 2026 +0800
+
+    用正确编码重新添加学习进度
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 5a2694d..b9ddfed 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1 +1,7 @@[m
+[31m-"Hello Git" [m
+[32m+[m[32mHello Git[m
+[32m+[m
+[32m+[m[32m## 学习进度[m
+[32m+[m[32m- 已学会 git init[m
+[32m+[m[32m- 已学会 git add[m
+[32m+[m[32m- 已学会 git commit[m
+[32m+[m[32m- 已学会 git log[m
+
+[33mcommit 616dff44122a4b903c383c74699b95ebe9fa0d27[m
+Author: Zhang San <zhangsan@example.com>
+Date:   Wed Jun 3 14:21:26 2026 +0800
+
+    我的第一次提交
+
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5a2694d[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m"Hello Git"[m[41m [m
